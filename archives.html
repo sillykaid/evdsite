@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Evade Archives</title>
+    <style>
+        @font-face {
+            font-family: 'W95FA';
+            src: url('W95FA.otf') format('opentype');
+        }
+
+        body {
+            margin: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'W95FA', sans-serif;
+            color: #FFFFFF;
+            background-image: url('bgnew.png');
+            background-size: cover;
+            font-family: 'W95FA', sans-serif; 
+            height: 100vh;
+            overflow: hidden; 
+            z-index: 5;
+        }
+
+        .container {
+            background-color: rgba(20, 20, 20, 0.95);
+            padding: 20px;
+            border-radius: 12px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            margin: 10px 0;
+            padding: 10px 20px;
+            border: none;
+            width: 100%;
+            border-radius: 12px;
+            background-color: #2C2C2C;
+            color: #FFFFFF;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #3C3C3C;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #2C2C2C;
+            border-radius: 12px;
+            text-align: center;
+            width: 100%;
+            margin-right: 5px;
+        }
+
+        .tab.active {
+            background-color: #3C3C3C;
+        }
+
+        .tab-content {
+            display: none;
+            width: 100%;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .scroll-container {
+            max-height: 300px;
+            overflow-y: auto;
+            width: 100%;
+            padding-right: 10px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1f1f1f;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1f1f1f;
+        }
+
+        body:before {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url(overlay.png);
+	background-repeat: all;
+	background-position: 0px 0px;
+	animation-name: Static;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
+	box-shadow: inset 0px 0px 10em rgba(0,0,0,0.4);
+}
+
+body:after {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url(overlay2.png);
+	background-repeat: all;
+	background-position: 0px 0px;
+	animation-name: Static;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
+}
+
+@keyframes Static {
+	0% { background-position: 0px 0px; }
+	100% { background-position: 0px 4px; }
+}
+
+
+#overlay-image {
+        position: absolute;
+        bottom: 40px; 
+        left: 3%;
+        z-index: 9;
+        width: 500px;
+    }
+
+    #animated-text {
+        position: absolute;
+        bottom: 300px; 
+        left: 10%;
+        z-index: 9;
+        font-family: url('countdown.ttf'), sans-serif;
+        font-size: 36px; 
+        color: white;
+        text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; 
+        box-shadow: #000;
+        white-space: nowrap;
+    }
+
+    @keyframes blinkCursor {
+        from { border-right-color: white; }
+        to { border-right-color: transparent; }
+    }
+
+    .typed-text {
+        animation: blinkCursor 0.7s step-end infinite;
+    }
+
+    #header {
+    position: relative;
+    z-index: 1;
+}
+
+    </style>
+    </style>
+    <script>
+        function openTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Evade Archives</h1>
+        <div class="tabs">
+            <div class="tab active" data-tab="tab1" onclick="openTab('tab1')">SOON</div>
+            <div class="tab" data-tab="tab2" onclick="openTab('tab2')">SOON</div>
+            <div class="tab" data-tab="tab3" onclick="openTab('tab3')">SOON</div>
+            <div class="tab" data-tab="tab4" onclick="openTab('tab4')">Misc</div>
+        </div>
+        <div id="tab4" class="tab-content active">
+            <div class="scroll-container">
+                <a href="documents/Seba.txt"><button>Seba</button></a>
+                <a href="documents/Alex.txt"><button>AlexCallahan</button></a>
+                <a href="documents/VesBenz.txt"><button>VesBenz</button></a>
+                <a href="documents/Interstella.txt"><button>Interstella</button></a>
+                <a href="documents/MWebb.txt"><button>AP</button></a>
+                <a href="documents/English.txt"><button>English</button></a>
+            </div>
+            </div>
+        </div>
+</html>

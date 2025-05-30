@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/star.css">
+    <script src="js/antinspect.js"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <script src="js/rocket-loader.min.js" data-cf-settings="0e3129054fa97055e1fdc294-|49"></script>
+    </head><body onload="document.body.style.opacity='1'" class="wallpaper">
+    <title>evade</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        @font-face {
+            font-family: 'Minecraftia';
+            src: url('fonts/Minecraftia.ttf') format('truetype');
+        }
+        body {
+            margin: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'W95FA', sans-serif;
+            color: #FFFFFF;
+            background-image: url('bgnew.png');
+            background-size: cover;
+            font-family: 'W95FA', sans-serif; 
+            height: 100vh;
+            overflow: hidden; 
+            z-index: 5;
+        }
+
+        body:before {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url(overlay.png);
+	background-repeat: all;
+	background-position: 0px 0px;
+	animation-name: Static;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
+	box-shadow: inset 0px 0px 10em rgba(0,0,0,0.4);
+}
+
+body:after {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url(overlay2.png);
+	background-repeat: all;
+	background-position: 0px 0px;
+	animation-name: Static;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
+}
+@keyframes Static {
+	0% { background-position: 0px 0px; }
+	100% { background-position: 0px 4px; }
+}
+
+.gif {
+        width: 230px;
+        height: 230px;
+        position: absolute;
+        filter: grayscale(100%);
+        object-fit: cover;
+        object-position: center;
+        display: inline;
+        left: 200px;
+        top: 200px
+    }
+        @keyframes sparkling {
+            0% {
+                opacity: 0.2;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.2;
+            }
+        }
+
+        .sparkle-text {
+            animation: sparkling 2s infinite;
+        }
+
+        .navigation a {
+            text-shadow: 0px 0px 16.5px white;
+        }
+
+        .sparkle-text {
+            animation: sparkling 2s infinite;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Minecraftia', sans-serif;
+            font-size: 24px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+    <div id="overlay">
+        <div>
+            <p>Click to enter...</p>
+        </div>
+    </div>
+
+    <div class="galaxy">
+        <div class="stars1"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <div class="container">
+        <h1 class="title">evade</h1>
+        <div class="profiles">
+            
+            <a href="https://t.me/shesinmyheadd" class="profile-link">
+                <div class="profile">
+                    <i class="fa-solid fa-crown"></i>
+                    <img src="images/Kaid.jpg" alt="Kaid">
+                    <p>@Kaid</p>
+                </div>
+            </a>
+            <a href="https://t.me/sinnul" class="profile-link">
+                <div class="profile">
+                    <i class="fa-solid fa-crown"></i>
+                    <img src="images/Mp5.jpg" alt="Save">
+                    <p>@Save</p>
+                </div>
+            </a>
+            <a href="https://evadee.space/" class="profile-link">
+                <div class="profile">
+                    <img src="images/Skittle.jpg" alt="Skittle">
+                    <p>@Skittle</p>
+                </div>
+            </a>
+            <a href="https://t.me/felonycharges/" class="profile-link">
+                <div class="profile">
+                    <img src="images/Auth.jpg" alt="Auth">
+                    <p>@Auth</p>
+                </div>
+            </a>
+            <a href="https://evadee.space/" class="profile-link">
+                <div class="profile">
+                    <img src="images/Syth.jpg" alt="Syth">
+                    <p>@Syth</p>
+                </div>
+            </a>
+            <a href="https://evadee.space/" class="profile-link">
+                <div class="profile">
+                    <img src="images/Proph.jpg" alt="Proph">
+                    <p>@Proph</p>
+                </div>
+            </a>
+        </div>
+        <div class="archive-link">
+            <a href="/archives" class="profile-link">
+                <p>Archives</p>
+            </a>
+        </div>
+    </div>
+    
+
+    <div id="bottom-left">
+        © <a href="https://t.me/evadeanc" target="_blank" style="color:white; text-decoration: none;">evade</a> | <a href="https://doxbin.com/" target="_blank" style="color:white; text-decoration: none;">Doxbin</a> | 2025
+    </div>
+
+    <script>
+        document.getElementById("overlay").addEventListener("click", function() {
+            document.getElementById("overlay").style.display = "none";
+            var audio = new Audio('/music/song.mp3');
+            audio.volume = 0.03;
+            audio.play();
+        });
+    </script>
+
+
+</body></html>
